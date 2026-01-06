@@ -1,0 +1,90 @@
+from flask import Flask
+app=Flask(__name__) # Flask(__main__)  Creating a Instance for Flask Class 
+
+@app.route("/")
+def home():
+    return "<h1> Welcome to Flask </h1>"
+
+@app.route("/index")
+def index():
+    return "<h1> Welcome to Flask In Softronix IT Training...</h1>"
+
+@app.route("/soft")
+def soft():
+    return " <marquee> <h1> Softronix IT Training...</h1> </marquee>"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+==============================
+HTTP Status Code
+==============================
+
+========================================================================
+1xx (100 to 199) : Information (Request recivied, processing continues)
+=========================================================================
+
+====================================================================
+2xx (200 to 299) : Success (Request was Successfully  recivied)
+===================================================================
+
+200 OK   ==> Successful GET/PUT
+
+201 created
+
+202 Accepted
+
+204 No Content
+
+3xx (300 to 399) : Redirection 
+
+=================================================
+4xx -Client Errors Problem from the client side
+=================================================
+
+400 --> Bad Request
+
+401 --> Unauthorized
+
+403 --> Forbidden
+
+404 --> Not Found
+
+405 --> Method is not allow
+
+409 --> Conflict
+
+422 --> Unprocessable Entity
+
+
+============================
+5xx - Server Errors
+============================
+500 Internal Server Error
+
+502 Bad Gatway
+
+503 Service Unavailable
+
+504 Gateway Time Out
+
+==============================
+Project Structure in Flask
+==============================
+
+MyApp
+  |--- static (it's deal with css, js files)
+  |--- templates (it's deal with html files)
+  |--- app.py
+  
+Create a static folder in Your Project Folder
+
+Create a templates folder in your Project Folder
+
+Create a html file in templates folder
+
+Note: Avoid Spelling Mistake while creating a Folder 
+
+
+
+
+
