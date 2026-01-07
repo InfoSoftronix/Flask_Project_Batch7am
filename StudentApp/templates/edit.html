@@ -10,7 +10,7 @@
      rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous">
     
-    <link rel="stylesheet" href="static/view.css"> 
+    <link rel="stylesheet" href="static/index.css"> 
 </head>
 <body>
 
@@ -53,36 +53,36 @@
         <h1 class="display-4 mb-4">Student Management</h1>
         <p class="lead mb-5">Welcome to the student registration and viewing portal.</p>
         
-       
+        <form action="../update", method="post">
             <table>
-                <thead>
-                    <hr>
-                    <tr>
-                        <th>RollNO</th>
-                        <th>Name</th>
-                        <th>Course</th>
-                        <th>Duration</th>
-                        <th>Address</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for s in student %}
                 <tr>
-                     <td>{{s[0]}}</td>
-                     <td>{{s[1]}}</td>
-                     <td>{{s[2]}}</td>
-                     <td>{{s[3]}}</td>
-                     <td>{{s[4]}}</td>
-                     <td>
-                        <a href="/delete/{{s[0]}}" class="btn btn-lg btn-dangar">Delete</a>
-                        <a href="/edit/{{s[0]}}" class="btn btn-lg btn-outline-success">Edit</a>
-                     </td>
-
+                    <td>Student RollNo</td>
+                    <td><input type="text" name="srollNo" value="{{student[0]}}" readonly ></td>
                 </tr>
-                {% endfor %}
-               </tbody>
+                 <tr>
+                    <td>Student Name</td>
+                    <td><input type="text" name="sname" value="{{student[1]}}" ></td>
+                </tr>
+                 <tr>
+                    <td>Student Course</td>
+                    <td><input type="text" name="scourse" value="{{student[2]}}"></td>
+                </tr>
+                 <tr>
+                    <td>Student Duration</td>
+                    <td><input type="text" name="sduration" value="{{student[3]}}"></td>
+                </tr>
+                 <tr>
+                    <td>Student Address</td>
+                    <td><input type="text" name="saddr" value="{{student[4]}}"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="Update" value="Update" class="btn btn-lg btn-primary"></td>
+                    
+                </tr>
             </table>
+
+        </form>
 
     </div>
 </div>  
